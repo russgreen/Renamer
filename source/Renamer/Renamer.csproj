@@ -8,16 +8,20 @@
 		<Version>1.0.0</Version>
 		<UseWPF>true</UseWPF>
 		<LangVersion>latest</LangVersion>
+		<PlatformTarget>x64</PlatformTarget>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<ImplicitUsings>true</ImplicitUsings>
 		<NeutralLanguage>en</NeutralLanguage>
-		<Platforms>x64</Platforms>
-		<RuntimeIdentifier>win-x64</RuntimeIdentifier>		
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-
+		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+		<!--added so nuke works-->
 		<!-- Copy dependacies to output folder on build -->
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<RevitVersion>0</RevitVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$(Configuration.Contains('Debug'))">
@@ -72,6 +76,7 @@
 		<!--<IsRepackable Condition="$(Configuration.Contains('Release')) And '$(RevitVersion)' &lt; '2026'">true</IsRepackable>-->
 		<IsRepackable Condition="$(Configuration.Contains('Release'))">true</IsRepackable>
 		<RepackBinariesExcludes>Syncfusion*.dll</RepackBinariesExcludes>
+		<UserSecretsId>26c5b682-734c-4006-9b77-9604151d2a09</UserSecretsId>
 	</PropertyGroup>
 	
 	<ItemGroup>
@@ -110,9 +115,9 @@
 		<EmbeddedResource Include="Resources\Renamer_Button.png" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<!--<ItemGroup>
 		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
 			<_Parameter1>Renamer.Tests</_Parameter1>
 		</AssemblyAttribute>
-	</ItemGroup>
+	</ItemGroup>-->
 </Project>

@@ -6,7 +6,7 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPURLINFOABOUT" Value="https://github.com/russgreen/Renamer"/>
     <ROW Property="Manufacturer" Value="Russ Green"/>
-    <ROW Property="ProductCode" Value="2057:{4E0ADCD2-7962-4CEB-BB01-FE20D03D00F3} " Type="16"/>
+    <ROW Property="ProductCode" Value="2057:{2E0B34B8-2058-49CE-880C-7213DF3EC3CB} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Renamer"/>
     <ROW Property="ProductVersion" Value="1.0.0" Options="32"/>
@@ -91,33 +91,33 @@
     <ROW File="Renamer.addin_2" Component_="Renamer.addin_2" FileName="RENAME~1.ADD|Renamer.addin" Attributes="0" SourcePath="..\source\Renamer\Renamer.addin" SelfReg="false"/>
     <ROW File="Renamer.addin_3" Component_="Renamer.addin_3" FileName="RENAME~1.ADD|Renamer.addin" Attributes="0" SourcePath="..\source\Renamer\Renamer.addin" SelfReg="false"/>
     <ROW File="Renamer.addin_4" Component_="Renamer.addin_4" FileName="RENAME~1.ADD|Renamer.addin" Attributes="0" SourcePath="..\source\Renamer\Renamer.addin" SelfReg="false"/>
-    <ROW File="Renamer.dll" Component_="Renamer.dll" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R25\Renamer.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Data.WPF.dll" Component_="Syncfusion.Data.WPF.dll" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R25\Syncfusion.Data.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Licensing.dll" Component_="Syncfusion.Licensing.dll" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R25\Syncfusion.Licensing.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.SfGrid.WPF.dll" Component_="Syncfusion.SfGrid.WPF.dll" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R25\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Shared.WPF.dll" Component_="Syncfusion.Shared.WPF.dll" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R25\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Shared.WPF.dll_1" Component_="Syncfusion.Shared.WPF.dll_1" FileName="SYNCFU~1.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R24\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
-    <ROW File="Renamer.dll_1" Component_="Renamer.dll_1" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R24\Renamer.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Data.WPF.dll_1" Component_="Syncfusion.Data.WPF.dll_1" FileName="SYNCFU~2.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R24\Syncfusion.Data.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Licensing.dll_1" Component_="Syncfusion.Licensing.dll_1" FileName="SYNCFU~3.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R24\Syncfusion.Licensing.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.SfGrid.WPF.dll_1" Component_="Syncfusion.SfGrid.WPF.dll_1" FileName="SYNCFU~4.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R24\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Data.WPF.dll_2" Component_="Syncfusion.Data.WPF.dll_2" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R23\Syncfusion.Data.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Licensing.dll_2" Component_="Syncfusion.Licensing.dll_2" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R23\Syncfusion.Licensing.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.SfGrid.WPF.dll_2" Component_="Syncfusion.SfGrid.WPF.dll_2" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R23\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Shared.WPF.dll_2" Component_="Syncfusion.Shared.WPF.dll_2" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R23\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
-    <ROW File="Renamer.dll_2" Component_="Renamer.dll_2" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R23\Renamer.dll" SelfReg="false"/>
-    <ROW File="Renamer.dll_3" Component_="Renamer.dll_3" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R22\Renamer.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Data.WPF.dll_3" Component_="Syncfusion.Data.WPF.dll_3" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R22\Syncfusion.Data.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Licensing.dll_3" Component_="Syncfusion.Licensing.dll_3" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R22\Syncfusion.Licensing.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.SfGrid.WPF.dll_3" Component_="Syncfusion.SfGrid.WPF.dll_3" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R22\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Shared.WPF.dll_3" Component_="Syncfusion.Shared.WPF.dll_3" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R22\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
-    <ROW File="Renamer.dll_4" Component_="Renamer.dll_4" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R26\Renamer.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Data.WPF.dll_4" Component_="Syncfusion.Data.WPF.dll_4" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R26\Syncfusion.Data.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Licensing.dll_4" Component_="Syncfusion.Licensing.dll_4" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R26\Syncfusion.Licensing.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.SfGrid.WPF.dll_4" Component_="Syncfusion.SfGrid.WPF.dll_4" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R26\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
-    <ROW File="Syncfusion.Shared.WPF.dll_4" Component_="Syncfusion.Shared.WPF.dll_4" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R26\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
-    <ROW File="Renamer.deps.json" Component_="Renamer.deps.json" FileName="RENAME~1.JSO|Renamer.deps.json" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R25\Renamer.deps.json" SelfReg="false"/>
-    <ROW File="Renamer.deps.json_1" Component_="Renamer.deps.json_1" FileName="RENAME~1.JSO|Renamer.deps.json" Attributes="0" SourcePath="..\source\Renamer\bin\x64\Release R26\Renamer.deps.json" SelfReg="false"/>
+    <ROW File="Renamer.dll" Component_="Renamer.dll" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R25\Renamer.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WPF.dll" Component_="Syncfusion.Data.WPF.dll" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R25\Syncfusion.Data.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll" Component_="Syncfusion.Licensing.dll" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R25\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfGrid.WPF.dll" Component_="Syncfusion.SfGrid.WPF.dll" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R25\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.WPF.dll" Component_="Syncfusion.Shared.WPF.dll" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R25\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.WPF.dll_1" Component_="Syncfusion.Shared.WPF.dll_1" FileName="SYNCFU~1.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R24\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
+    <ROW File="Renamer.dll_1" Component_="Renamer.dll_1" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R24\Renamer.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WPF.dll_1" Component_="Syncfusion.Data.WPF.dll_1" FileName="SYNCFU~2.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R24\Syncfusion.Data.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_1" Component_="Syncfusion.Licensing.dll_1" FileName="SYNCFU~3.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R24\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfGrid.WPF.dll_1" Component_="Syncfusion.SfGrid.WPF.dll_1" FileName="SYNCFU~4.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R24\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WPF.dll_2" Component_="Syncfusion.Data.WPF.dll_2" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R23\Syncfusion.Data.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_2" Component_="Syncfusion.Licensing.dll_2" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R23\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfGrid.WPF.dll_2" Component_="Syncfusion.SfGrid.WPF.dll_2" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R23\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.WPF.dll_2" Component_="Syncfusion.Shared.WPF.dll_2" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R23\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
+    <ROW File="Renamer.dll_2" Component_="Renamer.dll_2" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R23\Renamer.dll" SelfReg="false"/>
+    <ROW File="Renamer.dll_3" Component_="Renamer.dll_3" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R22\Renamer.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WPF.dll_3" Component_="Syncfusion.Data.WPF.dll_3" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R22\Syncfusion.Data.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_3" Component_="Syncfusion.Licensing.dll_3" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R22\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfGrid.WPF.dll_3" Component_="Syncfusion.SfGrid.WPF.dll_3" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R22\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.WPF.dll_3" Component_="Syncfusion.Shared.WPF.dll_3" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R22\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
+    <ROW File="Renamer.dll_4" Component_="Renamer.dll_4" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R26\Renamer.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WPF.dll_4" Component_="Syncfusion.Data.WPF.dll_4" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R26\Syncfusion.Data.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_4" Component_="Syncfusion.Licensing.dll_4" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R26\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfGrid.WPF.dll_4" Component_="Syncfusion.SfGrid.WPF.dll_4" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R26\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.WPF.dll_4" Component_="Syncfusion.Shared.WPF.dll_4" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R26\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
+    <ROW File="Renamer.deps.json" Component_="Renamer.deps.json" FileName="RENAME~1.JSO|Renamer.deps.json" Attributes="0" SourcePath="..\source\Renamer\bin\Release R25\Renamer.deps.json" SelfReg="false"/>
+    <ROW File="Renamer.deps.json_1" Component_="Renamer.deps.json_1" FileName="RENAME~1.JSO|Renamer.deps.json" Attributes="0" SourcePath="..\source\Renamer\bin\Release R26\Renamer.deps.json" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
     <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFileName="Renamer.[|ProductVersion]" Languages="en_GB" InstallationType="4" SummInfoMetadata="Page Count:450" UseLargeSchema="true" MsiPackageType="x64"/>

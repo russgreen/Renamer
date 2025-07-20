@@ -68,8 +68,4 @@
     <PackageReference Include="FluentAssertions" Version="6.12.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Renamer\Renamer.csproj" />
-  </ItemGroup>
-
 </Project>
