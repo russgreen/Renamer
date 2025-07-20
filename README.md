@@ -1,4 +1,8 @@
 # Renamer
+![Revit Version](https://img.shields.io/badge/Revit%20Version-2022_--_2024-blue.svg) ![.NET](https://img.shields.io/badge/.NET-4.8-blue.svg) <br>
+![Revit Version](https://img.shields.io/badge/Revit%20Version-2025_--_2026-blue.svg) ![.NET](https://img.shields.io/badge/.NET-8-blue.svg)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/russgreen/renamer) 
 
 A Revit add-in to batch rename elements. With this tool, you can rename multiple elements in your Revit project bu using a find/replace pattern or adding a prefix or suffix to the existing names.
 
