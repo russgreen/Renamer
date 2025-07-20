@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <!--<AddIn Type="Command">
+    <Text>Command Renamer</Text>
+    <Description>Some description for Renamer</Description>
+    <Assembly>Renamer.dll</Assembly>
+    <FullClassName>Renamer.Command</FullClassName>
+    <ClientId>d4927302-40ff-4165-9459-94d390d408f5</ClientId>
+    <VendorId>TBC_</VendorId>
+  </AddIn>-->
+  
+  <AddIn Type="Application">
+    <Name>Renamer</Name>
+    <Assembly>.\Renamer\Renamer.dll</Assembly>
+	<AddInId>859606CB-FF6F-4FA9-9E24-40A914CFF3C0</AddInId>
+    <FullClassName>Renamer.App</FullClassName>
+    <VendorId>ARBG</VendorId>
+	<VisibilityMode>NotVisibleInFamily</VisibilityMode>
+	<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+  </AddIn>
+
+	<ManifestSettings>
+		<UseRevitContext>False</UseRevitContext>
+		<ContextName>Renamer</ContextName>
+	</ManifestSettings>
+</RevitAddIns>

@@ -1,0 +1,118 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Configurations>Debug R22;Debug R23;Debug R24;Debug R25;Debug R26</Configurations>
+		<Configurations>$(Configurations);Release R22;Release R23;Release R24;Release R25;Release R26</Configurations>
+		<Description>(insert description)</Description>
+		<Copyright>Copyright © 2025 Russ Green. All rights Reserved</Copyright>
+		<Version>1.0.0</Version>
+		<UseWPF>true</UseWPF>
+		<LangVersion>latest</LangVersion>
+		<NeutralLanguage>en</NeutralLanguage>
+		<Platforms>x64</Platforms>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>		
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+
+		<!-- Copy dependacies to output folder on build -->
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('Debug'))">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<DefineConstants>$(DefineConstants);DEBUG;UseWPF</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('Release'))">
+		<Optimize>true</Optimize>
+		<DebugType>none</DebugType>
+		<DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R22'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2022</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2022</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R23'))">
+		<TargetFramework>net48</TargetFramework>		
+		<RevitVersion>2023</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2023</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R24'))">
+		<TargetFramework>net48</TargetFramework>		
+		<RevitVersion>2024</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2024</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER;REVIT2024_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R25'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2025</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2025</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER;REVIT2024_OR_GREATER;REVIT2025_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R26'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2026</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2026</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER;REVIT2024_OR_GREATER;REVIT2025_OR_GREATER;REVIT2026_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<!-- Define handy symbols to use in the code in order to accommodate different Revit versions,
+        e.g. by wrapping legacy / deprecated API calls with #if REVIT2014 | REVIT2015 -->
+		<PreprocessorDefinitions>$(DefineConstants)</PreprocessorDefinitions>
+    </PropertyGroup>
+
+	<PropertyGroup>
+		<!--<IsRepackable Condition="$(Configuration.Contains('Release')) And '$(RevitVersion)' &lt; '2026'">true</IsRepackable>-->
+		<IsRepackable Condition="$(Configuration.Contains('Release'))">true</IsRepackable>
+		<RepackBinariesExcludes>Syncfusion*.dll</RepackBinariesExcludes>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Humanizer.Core" Version="2.*" />
+		<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-*" />
+		<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-*" />	
+		<PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*-*" />
+		<PackageReference Include="Nice3point.Revit.Toolkit" Version="$(RevitVersion).*-*" />
+
+		<PackageReference Include="ini-parser-new" Version="2.6.2" />
+		
+		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
+
+		<PackageReference Include="Syncfusion.SfGrid.WPF" Version="29.1.35" />
+		
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.*" Condition="'$(TargetFramework)' == 'net48'" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
+
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="7.*" Condition="'$(TargetFramework)' == 'net48'" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="2.*" Condition="'$(TargetFramework)' == 'net48'" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.*" Condition="'$(TargetFramework)' == 'net48'" />
+
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="3.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
+		<PackageReference Include="Serilog.Sinks.File" Version="6.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
+
+		<!--Repacking-->
+		<PackageReference Include="ILRepack" Version="2.0.44">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Renamer_Button.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+			<_Parameter1>Renamer.Tests</_Parameter1>
+		</AssemblyAttribute>
+	</ItemGroup>
+</Project>
