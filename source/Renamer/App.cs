@@ -80,27 +80,22 @@ namespace Renamer
             var pullButton = panel.AddPullDownButton("Renamer_PullDown", "Renamer");
             pullButton.LargeImage = PngImageSource("Renamer.Resources.Renamer_Button.png");
             
-            pullButton.AddPushButton<CommandRenameFamilies>("Rename families")
-                .SetAvailabilityController<CommandAvailabilityProject>();
+            pullButton.AddPushButton<CommandRenameFamilies>("Rename families");
 
-            pullButton.AddPushButton<CommandRenameTypes>("Rename types")
-                .SetAvailabilityController<CommandAvailabilityProject>();
+            pullButton.AddPushButton<CommandRenameTypes>("Rename types");
 
             pullButton.AddSeparator();
 
-            pullButton.AddPushButton<CommandRenameMaterials>("Rename materials")
-                .SetAvailabilityController<CommandAvailabilityProject>();
+            pullButton.AddPushButton<CommandRenameMaterials>("Rename materials");
 
             pullButton.AddSeparator();
 
-            pullButton.AddPushButton<CommandRenameLevels>("Rename levels")
-                .SetAvailabilityController<CommandAvailabilityProject>();
+            pullButton.AddPushButton<CommandRenameLevels>("Rename levels");
 
-            pullButton.AddPushButton<CommandRenameViews>("Rename views")
-                .SetAvailabilityController<CommandAvailabilityProject>();
+            pullButton.AddPushButton<CommandRenameViews>("Rename views");
 
-            pullButton.AddPushButton<CommandRenameFilters>("Rename filters")
-                .SetAvailabilityController<CommandAvailabilityProject>();
+            pullButton.AddPushButton<CommandRenameFilters>("Rename filters");
+
 
             return panel;
         }
