@@ -5,7 +5,7 @@
 		<Configurations>$(Configurations);Release R22;Release R23;Release R24;Release R25;Release R26</Configurations>
 		<Description>(insert description)</Description>
 		<Copyright>Copyright © 2025 Russ Green. All rights Reserved</Copyright>
-		<Version>1.0.0</Version>
+		<Version>1.1.0</Version>
 		<UseWPF>true</UseWPF>
 		<LangVersion>latest</LangVersion>
 		<PlatformTarget>x64</PlatformTarget>
