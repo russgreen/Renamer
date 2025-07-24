@@ -96,6 +96,10 @@ namespace Renamer
 
             pullButton.AddPushButton<CommandRenameFilters>("Rename filters");
 
+            pullButton.AddSeparator();
+
+            pullButton.AddPushButton<CommandRenameAnnoationStyles>("Rename styles");
+
 
             return panel;
         }
