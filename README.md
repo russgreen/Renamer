@@ -14,6 +14,7 @@ You can rename:
 <li>Views (including View templates and Legends)</li>
 <li>Levels</li>
 <li>Filters</li>
+<li>Text and dimension styles</li>
 </ul>
 
 
