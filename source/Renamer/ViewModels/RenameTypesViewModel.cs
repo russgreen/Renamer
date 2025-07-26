@@ -34,6 +34,11 @@ internal partial class RenameTypesViewModel : BaseRenameViewModel
         SetBIMObjectName(item);
     }
 
+    protected override void PerformElementSpecificActionsAfterTransaction(ElementNameModel item)
+    {
+        // no specific actions for types
+    }
+
     private string GetNullCategoryName(ElementType elementType)
     {
         if(elementType.Category == null)

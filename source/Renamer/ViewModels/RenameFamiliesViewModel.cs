@@ -33,10 +33,15 @@ internal partial class RenameFamiliesViewModel : BaseRenameViewModel
 
     protected override void PerformElementSpecificActions(ElementNameModel item)
     {
-        SetBIMObjectName(item);
+        // no specific actions
     }
 
-    private void SetBIMObjectName(ElementNameModel item)
+    protected override void PerformElementSpecificActionsAfterTransaction(ElementNameModel item)
+    {
+        SetBimObjectName(item);
+    }
+
+    private void SetBimObjectName(ElementNameModel item)
     {
         try
         {

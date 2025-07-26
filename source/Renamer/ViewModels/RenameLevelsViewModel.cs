@@ -34,4 +34,9 @@ internal partial class RenameLevelsViewModel : BaseRenameViewModel
     {
         //no specific actions for levels
     }
+
+    protected override void PerformElementSpecificActionsAfterTransaction(ElementNameModel item)
+    {
+        // no specific actions for levels
+    }
 }

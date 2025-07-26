@@ -112,6 +112,11 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
         }
     }
 
+    protected override void PerformElementSpecificActionsAfterTransaction(ElementNameModel item)
+    {
+        // no specific actions for materials
+    }
+
     private void ChangeRenderingAssetTextureName(Element element, string oldString, string newString)
     {
         try

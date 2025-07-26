@@ -84,6 +84,7 @@ internal abstract partial class BaseRenameViewModel : BaseViewModel
 
     protected abstract void LoadElements();
     protected abstract void PerformElementSpecificActions(ElementNameModel item);
+    protected abstract void PerformElementSpecificActionsAfterTransaction(ElementNameModel item);
 
     private void SelectedElements_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
     {
@@ -174,7 +175,10 @@ internal abstract partial class BaseRenameViewModel : BaseViewModel
                         {
                             item.Element.Name = item.NewName;
                             PerformElementSpecificActions(item);
+
                             transaction.Commit();
+
+                            PerformElementSpecificActionsAfterTransaction(item);
 
                             _logger.LogInformation($"Renamed {item.Name} to {item.NewName}");
                             item.NewName = "[Renamed]";
