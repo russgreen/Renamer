@@ -1,12 +1,13 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using Autodesk.Revit.ApplicationServices;
+﻿using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Microsoft.Extensions.Logging;
 using Nice3point.Revit.Toolkit;
 using Nice3point.Revit.Toolkit.External;
+using Serilog.Context;
+using System;
+using System.Runtime.InteropServices;
 
 namespace Renamer.Commands
 {
@@ -18,7 +19,12 @@ namespace Renamer.Commands
 
         public override void Execute()
         {
-            _logger.LogInformation("{command}", nameof(CommandRenameTypes));
+            _logger.LogInformation("{command}", nameof(CommandRenameFamilies));
+
+            using (LogContext.PushProperty("UsageTracking", true))
+            {
+                _logger.LogInformation("{command}", nameof(CommandRenameFamilies));
+            }
 
             App.CachedUiApp = Context.UiApplication;
             App.RevitDocument = Context.ActiveDocument;
