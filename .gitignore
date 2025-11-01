@@ -369,3 +369,7 @@ SyncfusionKey.txt
 Installer/*.back.aip
 Installer/Renamer-cache/*
 Installer/Renamer-SetupFiles/*
+
+# misc solution stuff
+ApiSecret.txt
+MeasurementId.txt

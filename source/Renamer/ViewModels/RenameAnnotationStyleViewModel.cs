@@ -62,4 +62,9 @@ internal partial class RenameAnnotationStyleViewModel : BaseRenameViewModel
     {
         // no specific actions for styles
     }
+
+    protected override void PerformElementSpecificActionsAfterTransaction(ElementNameModel item)
+    {
+        // no specific actions for styles
+    }
 }

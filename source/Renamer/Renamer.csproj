@@ -104,6 +104,10 @@
 		<PackageReference Include="Serilog.Sinks.Debug" Version="3.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
 		<PackageReference Include="Serilog.Sinks.File" Version="6.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
 
+		<PackageReference Include="Serilog.Sinks.Async" Version="2.*" />
+
+		<PackageReference Include="Serilog.Sinks.GoogleAnalytics" Version="1.*" />
+		
 		<!--Repacking-->
 		<PackageReference Include="ILRepack" Version="2.0.44">
 			<PrivateAssets>all</PrivateAssets>

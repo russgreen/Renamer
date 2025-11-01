@@ -32,7 +32,12 @@ internal partial class RenameFiltersViewModel : BaseRenameViewModel
 
     protected override void PerformElementSpecificActions(ElementNameModel item)
     {
-        SetBIMObjectName(item);
+        // no specific actions for filters        
+    }
+
+    protected override void PerformElementSpecificActionsAfterTransaction(ElementNameModel item)
+    {
+        // no specific actions for filters
     }
 
     private string GetCategory(FilterElement filter)
@@ -48,42 +53,5 @@ internal partial class RenameFiltersViewModel : BaseRenameViewModel
         }
 
         return "Unknown";
-    }
-
-
-    private void SetBIMObjectName(ElementNameModel item)
-    {
-        try
-        {
-            var family = (Family)item.Element;
-            var formula = "\"" + item.NewName + "\"";
-
-            SetFamilyParameterFormula(family, "BIMObjectName", formula);
-        }
-        catch
-        {
-            // If the parameter does not exist, we can skip this
-        }
-    }
-
-    private void SetFamilyParameterFormula(Family family, string parameterName, string formula)
-    {
-        // Open the family for editing
-        var famDoc = family.Document.EditFamily(family);
-        var famManager = famDoc.FamilyManager;
-        var param = famManager.get_Parameter(parameterName);
-
-        if (param != null)
-        {
-            using (var trans = new Transaction(famDoc, "Set Formula"))
-            {
-                trans.Start();
-                famManager.SetFormula(param, formula);
-                trans.Commit();
-            }
-
-            famDoc.LoadFamily(App.RevitDocument, new FamilyLoadOptions());
-            famDoc.Close(false);
-        }
     }
 }

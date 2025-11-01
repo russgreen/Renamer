@@ -78,4 +78,9 @@ internal partial class RenameViewsViewModel : BaseRenameViewModel
     {
         //no specific actions for views
     }
+
+    protected override void PerformElementSpecificActionsAfterTransaction(ElementNameModel item)
+    {
+        // no specific actions for views
+    }
 }
