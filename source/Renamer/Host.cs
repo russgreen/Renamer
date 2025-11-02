@@ -40,9 +40,11 @@ namespace Renamer
                 .WriteTo.File(new JsonFormatter(), logPath,
                     restrictedToMinimumLevel: LogEventLevel.Warning,
                     rollingInterval: RollingInterval.Day,
-                    retainedFileCountLimit: 7))
+                    retainedFileCountLimit: 7));
 
+#if !DEBUG
             //write to google analytics
+            loggerConfigRenamer = loggerConfigRenamer
             .WriteTo.GoogleAnalytics(opts =>
             {
                 opts.MeasurementId = "##MEASUREMENTID##";
@@ -60,6 +62,7 @@ namespace Renamer
 
                 opts.CountryId = regionInfo.TwoLetterISORegionName;
             });
+#endif
 
             Log.Logger = loggerConfigRenamer.CreateLogger();
 
