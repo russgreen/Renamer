@@ -1,20 +1,10 @@
 ﻿using Nuke.Common;
 using Nuke.Common.Git;
 using Nuke.Common.IO;
-using Nuke.Common.ProjectModel;
-using Nuke.Common.Tooling;
-using Nuke.Common.Tools.DotNet;
-using Nuke.Common.Tools.MSBuild;
 using Nuke.Common.Tools.SignTool;
-using Octokit;
 using Serilog;
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.IO.Enumeration;
 using System.Linq;
-using System.Reflection.PortableExecutable;
-using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.SignTool.SignToolTasks;
 
 partial class Build

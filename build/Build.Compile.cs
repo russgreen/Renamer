@@ -1,9 +1,6 @@
 ﻿using Nuke.Common;
-using Nuke.Common.ProjectModel;
 using Nuke.Common.Tools.DotNet;
 using Serilog;
-using System.Collections.Generic;
-using System.Linq;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
 partial class Build
@@ -12,7 +9,7 @@ partial class Build
     .TriggeredBy(Clean)
     .Executes(() =>
     {
-        foreach (var configuration in GlobBuildConfigurations())
+        foreach (var configuration in Solution.GetModel().BuildTypes)
         {
             Log.Information("Configuration name: {configuration}", configuration);
 
@@ -29,15 +26,4 @@ partial class Build
         }
 
     });
-
-    IEnumerable<string> GlobBuildConfigurations()
-    {
-        var configurations = Solution.Configurations
-            .Select(pair => pair.Key)
-            .Select(config => config.Remove(config.LastIndexOf('|')))
-            .Distinct()
-            .ToList();
-
-        return configurations;
-    }
 }

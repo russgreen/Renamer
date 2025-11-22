@@ -80,7 +80,7 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Humanizer.Core" Version="2.*" />
+		<PackageReference Include="Humanizer.Core" Version="3.*" />
 		<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-*" />
 		<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-*" />	
 		<PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*-*" />
@@ -88,17 +88,17 @@
 
 		<PackageReference Include="ini-parser-new" Version="2.6.2" />
 		
-		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
 
 		<PackageReference Include="Syncfusion.SfGrid.WPF" Version="29.1.35" />
 		
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.*" Condition="'$(TargetFramework)' == 'net48'" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.*" Condition="'$(TargetFramework)' == 'net48'" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
 
-		<PackageReference Include="Serilog.Extensions.Hosting" Version="7.*" Condition="'$(TargetFramework)' == 'net48'" />
-		<PackageReference Include="Serilog.Sinks.Debug" Version="2.*" Condition="'$(TargetFramework)' == 'net48'" />
-		<PackageReference Include="Serilog.Sinks.File" Version="5.*" Condition="'$(TargetFramework)' == 'net48'" />
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.*" Condition="'$(TargetFramework)' == 'net48'" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="3.*" Condition="'$(TargetFramework)' == 'net48'" />
+		<PackageReference Include="Serilog.Sinks.File" Version="6.*" Condition="'$(TargetFramework)' == 'net48'" />
 
 		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
 		<PackageReference Include="Serilog.Sinks.Debug" Version="3.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
