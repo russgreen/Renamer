@@ -1,0 +1,35 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug R22" />
+    <BuildType Name="Debug R23" />
+    <BuildType Name="Debug R24" />
+    <BuildType Name="Debug R25" />
+    <BuildType Name="Debug R26" />
+    <BuildType Name="Release R22" />
+    <BuildType Name="Release R23" />
+    <BuildType Name="Release R24" />
+    <BuildType Name="Release R25" />
+    <BuildType Name="Release R26" />
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="build/_build.csproj">
+    <BuildType Solution="Debug R22|x64" Project="Debug" />
+    <BuildType Solution="Debug R23|x64" Project="Debug" />
+    <BuildType Solution="Debug R24|x64" Project="Debug" />
+    <BuildType Solution="Debug R25|x64" Project="Debug" />
+    <BuildType Solution="Debug R26|Any CPU" Project="Debug R25" />
+    <BuildType Solution="Debug R26|x64" Project="Debug" />
+    <BuildType Solution="Debug R26|x86" Project="Debug R25" />
+    <BuildType Solution="Release R22|x64" Project="Release" />
+    <BuildType Solution="Release R23|x64" Project="Release" />
+    <BuildType Solution="Release R24|x64" Project="Release" />
+    <BuildType Solution="Release R25|x64" Project="Release" />
+    <BuildType Solution="Release R26|Any CPU" Project="Release R25" />
+    <BuildType Solution="Release R26|x64" Project="Release" />
+    <BuildType Solution="Release R26|x86" Project="Release R25" />
+    <Build Solution="*|x64" Project="false" />
+  </Project>
+  <Project Path="source/Renamer/Renamer.csproj" />
+</Solution>
