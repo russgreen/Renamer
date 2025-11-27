@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Configurations>Debug R22;Debug R23;Debug R24;Debug R25;Debug R26</Configurations>
-		<Configurations>$(Configurations);Release R22;Release R23;Release R24;Release R25;Release R26</Configurations>
+		<Configurations>Debug R22;Debug R23;Debug R24;Debug R25;Debug R26;Debug R27</Configurations>
+		<Configurations>$(Configurations);Release R22;Release R23;Release R24;Release R25;Release R26;Release R27</Configurations>
 		<Description>(insert description)</Description>
 		<Copyright>Copyright © 2025 Russ Green. All rights Reserved</Copyright>
 		<Version>1.2.1</Version>
@@ -65,6 +65,13 @@
 		<DefineConstants>$(DefineConstants);REVIT2026</DefineConstants>
 		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER;REVIT2024_OR_GREATER;REVIT2025_OR_GREATER;REVIT2026_OR_GREATER</DefineConstants>
 	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R27'))">
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<RevitVersion>2027</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2027</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER;REVIT2024_OR_GREATER;REVIT2025_OR_GREATER;REVIT2026_OR_GREATER;REVIT2027_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	
 	
 	<PropertyGroup>
 		<!-- Define handy symbols to use in the code in order to accommodate different Revit versions,
@@ -80,30 +87,27 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Humanizer.Core" Version="2.*" />
-		<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-*" />
-		<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-*" />	
-		<PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*-*" />
-		<PackageReference Include="Nice3point.Revit.Toolkit" Version="$(RevitVersion).*-*" />
+		<PackageReference Include="Humanizer.Core" Version="3.*" />
 
 		<PackageReference Include="ini-parser-new" Version="2.6.2" />
 		
-		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.*" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
 
 		<PackageReference Include="Syncfusion.SfGrid.WPF" Version="29.1.35" />
 		
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.*" Condition="'$(TargetFramework)' == 'net48'" />
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.*" Condition="'$(TargetFramework)' != 'net48'" />
 
 		<PackageReference Include="Serilog.Extensions.Hosting" Version="7.*" Condition="'$(TargetFramework)' == 'net48'" />
 		<PackageReference Include="Serilog.Sinks.Debug" Version="2.*" Condition="'$(TargetFramework)' == 'net48'" />
 		<PackageReference Include="Serilog.Sinks.File" Version="5.*" Condition="'$(TargetFramework)' == 'net48'" />
 
-		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
-		<PackageReference Include="Serilog.Sinks.Debug" Version="3.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
-		<PackageReference Include="Serilog.Sinks.File" Version="6.*" Condition="'$(TargetFramework)' == 'net8.0-windows'" />
-
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="9.*" Condition="'$(TargetFramework)' != 'net48'" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="3.*" Condition="'$(TargetFramework)' != 'net48'" />
+		<PackageReference Include="Serilog.Sinks.File" Version="7.*" Condition="'$(TargetFramework)' != 'net48'" />
+		
+		
 		<PackageReference Include="Serilog.Sinks.Async" Version="2.*" />
 
 		<PackageReference Include="Serilog.Sinks.GoogleAnalytics" Version="1.*" />
@@ -114,11 +118,33 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
+	
+	<ItemGroup Condition="'$(RevitVersion)' != '2027'">	
+		<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-*" />
+		<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-*" />	
+		<PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*-*" />
+		<PackageReference Include="Nice3point.Revit.Toolkit" Version="$(RevitVersion).*-*" />
+	</ItemGroup>
+	
+	<ItemGroup Condition="'$(RevitVersion)' == '2027'">
+	  <Reference Include="RevitAPI">
+	    <HintPath>..\..\..\MyRevitAPI\2027\RevitAPI.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+		  <Reference Include="RevitAPIUI">
+	    <HintPath>..\..\..\MyRevitAPI\2027\RevitAPIUI.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	
+	  <PackageReference Include="Nice3point.Revit.Extensions" Version="2026.*-*" />
+	  <PackageReference Include="Nice3point.Revit.Toolkit" Version="2026.*-*" />
+	</ItemGroup>
+	
 
 	<ItemGroup>
 		<EmbeddedResource Include="Resources\Renamer_Button.png" />
 	</ItemGroup>
-
+	
 	<!--<ItemGroup>
 		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
 			<_Parameter1>Renamer.Tests</_Parameter1>
