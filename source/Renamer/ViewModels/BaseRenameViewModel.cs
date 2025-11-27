@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Reflection;
+using System.Xml.Linq;
 
 namespace Renamer.ViewModels;
 
@@ -180,14 +181,14 @@ internal abstract partial class BaseRenameViewModel : BaseViewModel
 
                             PerformElementSpecificActionsAfterTransaction(item);
 
-                            _logger.LogInformation($"Renamed {item.Name} to {item.NewName}");
+                            _logger.LogInformation("Renamed {Name} to {NewName}", item.Name, item.NewName);
                             item.NewName = "[Renamed]";
                             DispatcherHelper.DoEvents();
                         }
                         catch (Exception ex)
                         {
                             transaction.RollBack();
-                            _logger.LogError(ex, $"Failed to rename {item.Name} to {item.NewName}");
+                            _logger.LogError(ex, "Failed to rename {Name} to {NewName}", item.Name, item.NewName);
                         }
                     }
                 }

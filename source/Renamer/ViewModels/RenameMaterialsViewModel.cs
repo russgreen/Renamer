@@ -100,7 +100,7 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
                 }
             }
 
-            _logger.LogInformation($"Renamed {item.Name} to {item.NewName}");
+            _logger.LogInformation("Renamed {Name} to {NewName}", item.Name, item.NewName);
 
             item.NewName = "[Renamed]";
 
@@ -108,7 +108,7 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, $"Failed to rename {item.Name} to {item.NewName}");
+            _logger.LogError(ex, "Failed to rename {Name} to {NewName}", item.Name, item.NewName);
         }
     }
 
@@ -201,6 +201,8 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
         var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2025\Revit.ini";
 #elif REVIT2026
         var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2026\Revit.ini";
+#elif REVIT2027
+        var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2027\Revit.ini";
 #endif
 
 
@@ -209,7 +211,7 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
 
         var appearancePaths = revitIniData["Directories"]["AdditionalRenderAppearancePaths"].Split('|');
 
-        if(appearancePaths.Any())
+        if(appearancePaths.Length != 0)
         {
             foreach (var path in appearancePaths)
             {
@@ -230,10 +232,7 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
         {
             var param = item.Element.FindParameter("BIMObjectName_mtrl");
 
-            if (param != null)
-            {
-                param.Set(item.NewName);
-            }
+            param?.Set(item.NewName);
         }
         catch
         {
