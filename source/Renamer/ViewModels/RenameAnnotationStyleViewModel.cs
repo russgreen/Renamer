@@ -45,7 +45,7 @@ internal partial class RenameAnnotationStyleViewModel : BaseRenameViewModel
 
     private string GetCategoryName(Element element)
     {
-        if(element is TextNoteType textNoteType)
+        if(element is TextNoteType)
         {
             return "Text Style";
         }

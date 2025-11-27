@@ -77,10 +77,7 @@ internal partial class RenameTypesViewModel : BaseRenameViewModel
         {
             var param = item.Element.FindParameter("BIMObjectName");
 
-            if(param != null)
-            {
-                param.Set(item.NewName);
-            }
+            param?.Set(item.NewName);
                 
         }
         catch

@@ -63,18 +63,18 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
 
     private string GetCategoryName(Element element)
     {
-        if(element is Material mat)
+        if(element is Material)
         {
             // For Material, we can use the material's category name
             return "Material";
         }
 
-        if (element is AppearanceAssetElement appearanceAsset)
+        if (element is AppearanceAssetElement)
         {
             return "Appearance Asset";
         }
         
-        if (element is PropertySetElement physicalAsset)
+        if (element is PropertySetElement)
         {
             return "Physical Asset";
         }
