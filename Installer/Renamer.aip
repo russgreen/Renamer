@@ -6,10 +6,10 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPURLINFOABOUT" Value="https://github.com/russgreen/Renamer"/>
     <ROW Property="Manufacturer" Value="Russ Green"/>
-    <ROW Property="ProductCode" Value="2057:{C541FFB6-EA03-4D2E-91E4-64CA18A478C8} " Type="16"/>
+    <ROW Property="ProductCode" Value="2057:{625A9EF0-84B1-4E4B-ADED-FB42ED82F0F7} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Renamer"/>
-    <ROW Property="ProductVersion" Value="1.2.1" Options="32"/>
+    <ROW Property="ProductVersion" Value="1.2.2" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{9E39C5AA-EA69-45A7-A875-4F184F796F5F}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
