@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="23.2" Modules="simple" RootPath="." Language="en_GB" Id="{7FCC28C2-ABAA-4F47-B5A6-DFBC6CF4EA0B}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="23.3" Modules="simple" RootPath="." Language="en_GB" Id="{7FCC28C2-ABAA-4F47-B5A6-DFBC6CF4EA0B}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPURLINFOABOUT" Value="https://github.com/russgreen/Renamer"/>
     <ROW Property="Manufacturer" Value="Russ Green"/>
-    <ROW Property="ProductCode" Value="2057:{625A9EF0-84B1-4E4B-ADED-FB42ED82F0F7} " Type="16"/>
+    <ROW Property="ProductCode" Value="2057:{4F8C5928-B2D3-435A-A927-129F5900E05D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Renamer"/>
-    <ROW Property="ProductVersion" Value="1.2.2" Options="32"/>
+    <ROW Property="ProductVersion" Value="1.3.0" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{9E39C5AA-EA69-45A7-A875-4F184F796F5F}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
