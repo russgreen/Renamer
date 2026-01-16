@@ -61,6 +61,9 @@ internal abstract partial class BaseRenameViewModel : BaseViewModel
     [ObservableProperty]
     private bool _setPascalCase = false;
 
+    [ObservableProperty]
+    private bool _closeOnComplete = true;
+
     protected readonly ILogger _logger;
     protected readonly string _elementTypeName;
     protected readonly string _transactionGroupName;
@@ -196,6 +199,15 @@ internal abstract partial class BaseRenameViewModel : BaseViewModel
             transactionGroup.Assimilate();
         }
 
-        OnClosingRequest();
+        if (!CloseOnComplete)
+        {
+            LoadElements();
+        }
+
+        if (CloseOnComplete)
+        {
+            OnClosingRequest();
+        }
+
     }
 }
