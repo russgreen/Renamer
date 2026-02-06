@@ -98,7 +98,7 @@ namespace Renamer
 
             pullButton.AddSeparator();
 
-            pullButton.AddPushButton<CommandRenameAnnoationStyles>("Rename styles");
+            pullButton.AddPushButton<CommandRenameAnnotationStyles>("Rename styles");
 
 
             return panel;

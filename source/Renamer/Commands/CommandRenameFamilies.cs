@@ -26,8 +26,8 @@ namespace Renamer.Commands
                 _logger.LogInformation("{command}", nameof(CommandRenameFamilies));
             }
 
-            App.CachedUiApp = Context.UiApplication;
-            App.RevitDocument = Context.ActiveDocument;
+            App.CachedUiApp = RevitContext.UiApplication;
+            App.RevitDocument = RevitContext.ActiveDocument;
 
             var window = new Views.RenameFamiliesView();
             window.ShowDialog();

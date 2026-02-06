@@ -8,22 +8,23 @@ using Serilog.Context;
 using System;
 
 namespace Renamer.Commands;
+
 [Transaction(TransactionMode.Manual)]
-public class CommandRenameAnnoationStyles : ExternalCommand
+public class CommandRenameAnnotationStyles : ExternalCommand
 {
-    private readonly ILogger<CommandRenameAnnoationStyles> _logger = Host.GetService<ILogger<CommandRenameAnnoationStyles>>();
+    private readonly ILogger<CommandRenameAnnotationStyles> _logger = Host.GetService<ILogger<CommandRenameAnnotationStyles>>();
 
     public override void Execute()
     {
-        _logger.LogInformation("{command}", nameof(CommandRenameAnnoationStyles));
+        _logger.LogInformation("{command}", nameof(CommandRenameAnnotationStyles));
 
         using (LogContext.PushProperty("UsageTracking", true))
         {
-            _logger.LogInformation("{command}", nameof(CommandRenameAnnoationStyles));
+            _logger.LogInformation("{command}", nameof(CommandRenameAnnotationStyles));
         }
 
-        App.CachedUiApp = Context.UiApplication;
-        App.RevitDocument = Context.ActiveDocument;
+        App.CachedUiApp = RevitContext.UiApplication;
+        App.RevitDocument = RevitContext.ActiveDocument;
 
         var window = new Views.RenameAnnotationStyleView();
         window.ShowDialog();

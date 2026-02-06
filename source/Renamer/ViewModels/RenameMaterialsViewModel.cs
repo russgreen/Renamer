@@ -201,6 +201,8 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
         var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2025\Revit.ini";
 #elif REVIT2026
         var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2026\Revit.ini";
+#elif REVIT2027
+        var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2027\Revit.ini";
 #endif
 
 
