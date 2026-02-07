@@ -97,14 +97,15 @@
 		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.*" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
 
-		<PackageReference Include="Syncfusion.SfGrid.WPF" Version="29.*" />
-
+		<PackageReference Include="Syncfusion.SfGrid.WPF" Version="32.*" />
+		<PackageReference Include="Syncfusion.Shared.WPF" Version="32.*" />
+		
 		<!--IOC-->
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.*" />
 
 		<!--Logging-->
 		<PackageReference Include="Serilog.Extensions.Hosting" Version="10.*" />
-		<PackageReference Include="Serilog.Sinks.Debug" Version="3.*"  />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="3.*" />
 		<PackageReference Include="Serilog.Sinks.File" Version="7.*" />
 
 		<PackageReference Include="Serilog.Sinks.Async" Version="2.*" />
@@ -116,6 +117,8 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		
+		
 	</ItemGroup>
 
 	<ItemGroup>

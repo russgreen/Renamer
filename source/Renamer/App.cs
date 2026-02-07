@@ -42,7 +42,7 @@ namespace Renamer
             var panel = RibbonPanel(CachedUiCtrApp);
 
             Syncfusion.Licensing.SyncfusionLicenseProvider
-                .RegisterLicense("##SyncfusionLicense##");
+                .RegisterLicense("Ngo9BigBOggjGyl/VkR+XU9Ff1RDX3xKf0x/TGpQb19xflBPallYVBYiSV9jS3hTdEVkWHxbcXRWRGFUV091XQ==");
 
             AddAppDocEvents();
         }
