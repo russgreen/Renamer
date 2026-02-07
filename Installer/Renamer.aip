@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="23.3" Modules="simple" RootPath="." Language="en_GB" Id="{7FCC28C2-ABAA-4F47-B5A6-DFBC6CF4EA0B}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="23.4" Modules="simple" RootPath="." Language="en_GB" Id="{7FCC28C2-ABAA-4F47-B5A6-DFBC6CF4EA0B}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="ALLUSERS" Value="1"/>
@@ -25,20 +25,26 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1" DirectoryOptions="3"/>
+    <ROW Directory="Addins_1_Dir" Directory_Parent="Revit_1_Dir" DefaultDir="Addins"/>
     <ROW Directory="Addins_Dir" Directory_Parent="Revit_Dir" DefaultDir="Addins"/>
     <ROW Directory="Autodesk_Dir" Directory_Parent="CommonAppDataFolder" DefaultDir="Autodesk"/>
     <ROW Directory="CommonAppDataFolder" Directory_Parent="TARGETDIR" DefaultDir="COMMON~1|CommonAppDataFolder" IsPseudoRoot="1"/>
+    <ROW Directory="NewFolder_Dir" Directory_Parent="ProgramFiles64Folder" DefaultDir="Autodesk"/>
+    <ROW Directory="ProgramFiles64Folder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramFiles64Folder" IsPseudoRoot="1"/>
     <ROW Directory="Renamer_1_Dir" Directory_Parent="__2_Dir" DefaultDir="Renamer"/>
     <ROW Directory="Renamer_2_Dir" Directory_Parent="__Dir" DefaultDir="Renamer"/>
     <ROW Directory="Renamer_3_Dir" Directory_Parent="__3_Dir" DefaultDir="Renamer"/>
     <ROW Directory="Renamer_4_Dir" Directory_Parent="__4_Dir" DefaultDir="Renamer"/>
+    <ROW Directory="Renamer_5_Dir" Directory_Parent="__5_Dir" DefaultDir="Renamer"/>
     <ROW Directory="Renamer_Dir" Directory_Parent="__1_Dir" DefaultDir="Renamer"/>
+    <ROW Directory="Revit_1_Dir" Directory_Parent="NewFolder_Dir" DefaultDir="Revit"/>
     <ROW Directory="Revit_Dir" Directory_Parent="Autodesk_Dir" DefaultDir="Revit"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
     <ROW Directory="__1_Dir" Directory_Parent="Addins_Dir" DefaultDir="2022"/>
     <ROW Directory="__2_Dir" Directory_Parent="Addins_Dir" DefaultDir="2023"/>
     <ROW Directory="__3_Dir" Directory_Parent="Addins_Dir" DefaultDir="2025"/>
     <ROW Directory="__4_Dir" Directory_Parent="Addins_Dir" DefaultDir="2026"/>
+    <ROW Directory="__5_Dir" Directory_Parent="Addins_1_Dir" DefaultDir="2027"/>
     <ROW Directory="__Dir" Directory_Parent="Addins_Dir" DefaultDir="2024"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.SideBySideGuidComponent">
@@ -47,6 +53,40 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{16810D37-67E8-48A7-95A0-0F158FD132C3}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="CommunityToolkit.Mvvm.dll" ComponentId="{F7A044A6-386C-43F4-93DA-8C5FB7C1348D}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="CommunityToolkit.Mvvm.dll"/>
+    <ROW Component="Humanizer.dll" ComponentId="{29E11795-11C4-4A16-B646-90DB10541E52}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Humanizer.dll"/>
+    <ROW Component="IniParser.dll" ComponentId="{799C1899-7648-4FD6-A176-8A59FD1AAFB1}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="IniParser.dll"/>
+    <ROW Component="JetBrains.Annotations.dll" ComponentId="{EE202A2D-FA53-4CCE-AC1B-B0E6D31CFF6B}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="JetBrains.Annotations.dll"/>
+    <ROW Component="Microsoft.Extensions.Configuration.Abstractions.dll" ComponentId="{417DFFF3-C753-40F2-8161-0912299B9588}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Configuration.Binder.dll" ComponentId="{2420E379-A56C-48BF-A7EF-D85B7FE33D28}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.Binder.dll"/>
+    <ROW Component="Microsoft.Extensions.Configuration.CommandLine.dll" ComponentId="{9D9D42F7-C955-447E-A8E6-3114736BB7A1}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.CommandLine.dll"/>
+    <ROW Component="Microsoft.Extensions.Configuration.EnvironmentVariables.dll" ComponentId="{AF03CC0E-B108-4379-849C-B17936626F71}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.EnvironmentVariables.dll"/>
+    <ROW Component="Microsoft.Extensions.Configuration.FileExtensions.dll" ComponentId="{7627D066-11B3-4448-B248-F375AC4687ED}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.FileExtensions.dll"/>
+    <ROW Component="Microsoft.Extensions.Configuration.Json.dll" ComponentId="{A8D5F3FA-D494-4923-B8E4-5D99C52F5A38}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.Json.dll"/>
+    <ROW Component="Microsoft.Extensions.Configuration.UserSecrets.dll" ComponentId="{0F591B9E-9C3B-4C3F-94D0-4B2490841F70}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.UserSecrets.dll"/>
+    <ROW Component="Microsoft.Extensions.Configuration.dll" ComponentId="{708081E0-2E29-4A16-9580-7071A7714CC5}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.dll"/>
+    <ROW Component="Microsoft.Extensions.DependencyInj_1_ection.dll" ComponentId="{0100DC64-6032-4D2D-B9FB-6E70CF4F37C8}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.DependencyInjection.dll"/>
+    <ROW Component="Microsoft.Extensions.DependencyInjection.Abstractions.dll" ComponentId="{53A85A2D-4F0C-4BC6-99FB-4F12C77C7765}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Diagnostics.Abstractions.dll" ComponentId="{F2F43359-27BA-4C7F-8FCF-081C432B9983}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Diagnostics.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Diagnostics.dll" ComponentId="{98539148-536D-442E-BBE8-FF27F3AC4F5C}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Diagnostics.dll"/>
+    <ROW Component="Microsoft.Extensions.FileProviders.Abstractions.dll" ComponentId="{65A36671-5EB2-4ACA-846F-90EA4B600C2F}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.FileProviders.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.FileProviders.Physical.dll" ComponentId="{CCBA3D33-A09D-4E9B-A1E3-DC6439715325}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.FileProviders.Physical.dll"/>
+    <ROW Component="Microsoft.Extensions.FileSystemGlobbing.dll" ComponentId="{7DD3C6F0-055B-48D2-901F-8B78AF89FF9C}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.FileSystemGlobbing.dll"/>
+    <ROW Component="Microsoft.Extensions.Hosting.Abstractions.dll" ComponentId="{421FD6CD-2044-474D-A442-E24500FF6157}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Hosting.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Hosting.dll" ComponentId="{8F0EFF5B-3FA3-4EF6-B435-70397B1CD767}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Hosting.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.Abstractions.dll" ComponentId="{EC7F0F55-C7A4-4EF3-857F-124AABF6B3D5}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.Configuration.dll" ComponentId="{7E94D79B-D3C6-486A-87A9-A8F9BABF62B9}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.Configuration.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.Console.dll" ComponentId="{B45582FD-A43E-4D44-9C9F-AE9423D2583C}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.Console.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.Debug.dll" ComponentId="{B1B20F98-900C-46A7-9265-097E865B269F}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.Debug.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.EventLog.dll" ComponentId="{C87D793C-1B37-4F98-9805-B6E0CBA49B5C}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.EventLog.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.EventSource.dll" ComponentId="{363F7B5C-1583-494D-B1AF-1E7B58C3C43F}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.EventSource.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.dll" ComponentId="{09523265-7980-45C7-BB03-3C5F4972E111}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.dll"/>
+    <ROW Component="Microsoft.Extensions.Options.ConfigurationExtensions.dll" ComponentId="{166E6D24-239D-4ACB-BBFF-179D4C342D2B}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Options.ConfigurationExtensions.dll"/>
+    <ROW Component="Microsoft.Extensions.Options.dll" ComponentId="{6BCC6602-C51D-4F43-AC53-7A17DCC67D83}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Options.dll"/>
+    <ROW Component="Microsoft.Extensions.Primitives.dll" ComponentId="{9857986D-C00F-4842-8EED-197CDD136AD7}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Primitives.dll"/>
+    <ROW Component="Microsoft.Xaml.Behaviors.dll" ComponentId="{7984D0E1-9951-4D22-A39B-6253CB40B6C1}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW Component="Nice3point.Revit.Extensions.dll" ComponentId="{1F367CD5-1553-47E2-980D-0B444CF0EFDF}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Nice3point.Revit.Extensions.dll"/>
+    <ROW Component="Nice3point.Revit.Toolkit.dll" ComponentId="{F4DBB9A2-7B29-4063-B1D9-F3C8DF81AF97}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Nice3point.Revit.Toolkit.dll"/>
     <ROW Component="ProductInformation" ComponentId="{70BDE19A-39AE-4B46-B48F-67B41B479435}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
     <ROW Component="Renamer.addin" ComponentId="{B9226A82-365A-4147-B274-B3434DD68FDF}" Directory_="__1_Dir" Attributes="0" KeyPath="Renamer.addin" Type="0"/>
     <ROW Component="Renamer.addin_1" ComponentId="{ED77866E-A78A-4024-83B3-5634F5E70845}" Directory_="__2_Dir" Attributes="0" KeyPath="Renamer.addin_1" Type="0"/>
@@ -55,31 +95,46 @@
     <ROW Component="Renamer.addin_4" ComponentId="{24269A8B-93EF-4B57-8E32-6F2703E85100}" Directory_="__4_Dir" Attributes="0" KeyPath="Renamer.addin_4" Type="0"/>
     <ROW Component="Renamer.deps.json" ComponentId="{3AC51E9F-071E-4449-90D7-447445ED3182}" Directory_="Renamer_3_Dir" Attributes="0" KeyPath="Renamer.deps.json" Type="0"/>
     <ROW Component="Renamer.deps.json_1" ComponentId="{C888DBCC-85A5-4040-8AF5-DF74DA39A941}" Directory_="Renamer_4_Dir" Attributes="0" KeyPath="Renamer.deps.json_1" Type="0"/>
+    <ROW Component="Renamer.deps.json_2" ComponentId="{CCE2ED52-E8C0-4C77-84A7-11731C9AE7D3}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Renamer.deps.json_2" Type="0"/>
     <ROW Component="Renamer.dll" ComponentId="{CE6D685D-9E2F-4348-925F-21165F460AF1}" Directory_="Renamer_3_Dir" Attributes="256" KeyPath="Renamer.dll"/>
     <ROW Component="Renamer.dll_1" ComponentId="{A6194A46-7F5A-4861-9B79-3ED924E43AAE}" Directory_="Renamer_2_Dir" Attributes="256" KeyPath="Renamer.dll_1"/>
     <ROW Component="Renamer.dll_2" ComponentId="{B135DEEA-F62E-4FD1-8631-ACE407D10D5E}" Directory_="Renamer_1_Dir" Attributes="256" KeyPath="Renamer.dll_2"/>
     <ROW Component="Renamer.dll_3" ComponentId="{7BBF9B8D-5176-4BDF-B3E0-5356B0CBB0C4}" Directory_="Renamer_Dir" Attributes="256" KeyPath="Renamer.dll_3"/>
     <ROW Component="Renamer.dll_4" ComponentId="{E95D2393-7272-4DAC-B23D-CFDAB675DB78}" Directory_="Renamer_4_Dir" Attributes="256" KeyPath="Renamer.dll_4"/>
+    <ROW Component="Renamer.dll_5" ComponentId="{D32C0B7E-2B3B-413A-A090-9F2E02BDCD55}" Directory_="Renamer_5_Dir" Attributes="256" KeyPath="Renamer.dll_5"/>
+    <ROW Component="Renamer_Isolated.addin" ComponentId="{E25E3D64-212C-496B-8107-6FF61759C5F9}" Directory_="__5_Dir" Attributes="0" KeyPath="Renamer_Isolated.addin" Type="0"/>
+    <ROW Component="Serilog.Extensions.Hosting.dll" ComponentId="{C5D317E4-62EF-4171-8756-4C19EF3D3280}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Serilog.Extensions.Hosting.dll"/>
+    <ROW Component="Serilog.Extensions.Logging.dll" ComponentId="{21BAB081-0392-4142-AA55-280E67B94DB5}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Serilog.Extensions.Logging.dll"/>
+    <ROW Component="Serilog.Sinks.Async.dll" ComponentId="{FF246188-1F97-4B79-8FD0-715AA3D2C6E4}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Serilog.Sinks.Async.dll"/>
+    <ROW Component="Serilog.Sinks.Debug.dll" ComponentId="{3CB61FD1-F47F-4150-8207-3509FB1BED09}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Serilog.Sinks.Debug.dll"/>
+    <ROW Component="Serilog.Sinks.File.dll" ComponentId="{CE0D4BD0-0CE2-449D-BFB4-BCC3D8703091}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Serilog.Sinks.File.dll"/>
+    <ROW Component="Serilog.Sinks.GoogleAnalytics.dll" ComponentId="{0A3584EE-234A-4973-AE79-466A13F80F44}" Directory_="Renamer_5_Dir" Attributes="256" KeyPath="Serilog.Sinks.GoogleAnalytics.dll"/>
+    <ROW Component="Serilog.Sinks.PeriodicBatching.dll" ComponentId="{6CAFC5F2-19A0-4FB4-84A7-AEEAF7435436}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Serilog.Sinks.PeriodicBatching.dll"/>
+    <ROW Component="Serilog.dll" ComponentId="{67983DE1-72A8-442B-835B-3E993F022831}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Serilog.dll"/>
     <ROW Component="Syncfusion.Data.WPF.dll" ComponentId="{70DBB650-B1F2-4399-B653-A0A7C4F37C4B}" Directory_="Renamer_3_Dir" Attributes="0" KeyPath="Syncfusion.Data.WPF.dll"/>
     <ROW Component="Syncfusion.Data.WPF.dll_1" ComponentId="{487649BA-3D0A-478A-8597-A6A1EBCC745B}" Directory_="Renamer_2_Dir" Attributes="0" KeyPath="Syncfusion.Data.WPF.dll_1"/>
     <ROW Component="Syncfusion.Data.WPF.dll_2" ComponentId="{13B6F929-CC26-4843-A325-6D16AF9A987D}" Directory_="Renamer_1_Dir" Attributes="0" KeyPath="Syncfusion.Data.WPF.dll_2"/>
     <ROW Component="Syncfusion.Data.WPF.dll_3" ComponentId="{AE275285-4EEA-47D0-B99D-DED4CE5601F7}" Directory_="Renamer_Dir" Attributes="0" KeyPath="Syncfusion.Data.WPF.dll_3"/>
     <ROW Component="Syncfusion.Data.WPF.dll_4" ComponentId="{6080F4DD-B112-4FA3-8A2B-B40556BC602F}" Directory_="Renamer_4_Dir" Attributes="0" KeyPath="Syncfusion.Data.WPF.dll_4"/>
+    <ROW Component="Syncfusion.Data.WPF.dll_5" ComponentId="{CCA99799-49A9-491A-90D6-3D701142556B}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Syncfusion.Data.WPF.dll_5"/>
     <ROW Component="Syncfusion.Licensing.dll" ComponentId="{42D11D15-1E08-4CD9-89C0-4B907641ED31}" Directory_="Renamer_3_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll"/>
     <ROW Component="Syncfusion.Licensing.dll_1" ComponentId="{193262E6-C49A-4FFA-8E74-34BEE61C9D1B}" Directory_="Renamer_2_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_1"/>
     <ROW Component="Syncfusion.Licensing.dll_2" ComponentId="{F6210E04-945C-47F7-B117-D88995D1FB5E}" Directory_="Renamer_1_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_2"/>
     <ROW Component="Syncfusion.Licensing.dll_3" ComponentId="{E7F23487-5CB4-4442-8338-80DEB53D3550}" Directory_="Renamer_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_3"/>
     <ROW Component="Syncfusion.Licensing.dll_4" ComponentId="{19AA6211-1FB6-43F9-A510-753777515A01}" Directory_="Renamer_4_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_4"/>
+    <ROW Component="Syncfusion.Licensing.dll_5" ComponentId="{458DF1D5-4DBC-4334-B368-EFDC01B383FC}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Syncfusion.Licensing.dll_5"/>
     <ROW Component="Syncfusion.SfGrid.WPF.dll" ComponentId="{09C91D70-6C14-473E-B764-C64EE94F972E}" Directory_="Renamer_3_Dir" Attributes="0" KeyPath="Syncfusion.SfGrid.WPF.dll"/>
     <ROW Component="Syncfusion.SfGrid.WPF.dll_1" ComponentId="{36EACF76-CC3E-40AF-A233-6B069F41176D}" Directory_="Renamer_2_Dir" Attributes="0" KeyPath="Syncfusion.SfGrid.WPF.dll_1"/>
     <ROW Component="Syncfusion.SfGrid.WPF.dll_2" ComponentId="{AB5E6A36-D14A-4F3D-BF36-7F88CD478C66}" Directory_="Renamer_1_Dir" Attributes="0" KeyPath="Syncfusion.SfGrid.WPF.dll_2"/>
     <ROW Component="Syncfusion.SfGrid.WPF.dll_3" ComponentId="{25CA8E79-C68E-408D-8D6A-27968E0BFA86}" Directory_="Renamer_Dir" Attributes="0" KeyPath="Syncfusion.SfGrid.WPF.dll_3"/>
     <ROW Component="Syncfusion.SfGrid.WPF.dll_4" ComponentId="{DA8A236F-7ACB-4A1E-BC9D-DDC176B85230}" Directory_="Renamer_4_Dir" Attributes="0" KeyPath="Syncfusion.SfGrid.WPF.dll_4"/>
+    <ROW Component="Syncfusion.SfGrid.WPF.dll_5" ComponentId="{5B57FE8F-8973-436C-B208-40BE34550FD7}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Syncfusion.SfGrid.WPF.dll_5"/>
     <ROW Component="Syncfusion.Shared.WPF.dll" ComponentId="{4D1C4F5C-747E-4010-A2A7-5084ED1F0625}" Directory_="Renamer_3_Dir" Attributes="0" KeyPath="Syncfusion.Shared.WPF.dll"/>
     <ROW Component="Syncfusion.Shared.WPF.dll_1" ComponentId="{45E4B7A6-77EE-46D9-AEC2-E237211DD832}" Directory_="Renamer_2_Dir" Attributes="0" KeyPath="Syncfusion.Shared.WPF.dll_1"/>
     <ROW Component="Syncfusion.Shared.WPF.dll_2" ComponentId="{74CCC6DC-DB98-4143-8390-7CADC6AAF347}" Directory_="Renamer_1_Dir" Attributes="0" KeyPath="Syncfusion.Shared.WPF.dll_2"/>
     <ROW Component="Syncfusion.Shared.WPF.dll_3" ComponentId="{01C6E07B-11FA-4623-B084-356290AD0628}" Directory_="Renamer_Dir" Attributes="0" KeyPath="Syncfusion.Shared.WPF.dll_3"/>
     <ROW Component="Syncfusion.Shared.WPF.dll_4" ComponentId="{DDDB06FE-CD2D-4B26-A9CD-3E82C9AA1D36}" Directory_="Renamer_4_Dir" Attributes="0" KeyPath="Syncfusion.Shared.WPF.dll_4"/>
+    <ROW Component="Syncfusion.Shared.WPF.dll_5" ComponentId="{D0457E3E-C75F-492F-B4C7-A0982C50CF1F}" Directory_="Renamer_5_Dir" Attributes="0" KeyPath="Syncfusion.Shared.WPF.dll_5"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -118,6 +173,55 @@
     <ROW File="Syncfusion.Shared.WPF.dll_4" Component_="Syncfusion.Shared.WPF.dll_4" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R26\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
     <ROW File="Renamer.deps.json" Component_="Renamer.deps.json" FileName="RENAME~1.JSO|Renamer.deps.json" Attributes="0" SourcePath="..\source\Renamer\bin\Release R25\Renamer.deps.json" SelfReg="false"/>
     <ROW File="Renamer.deps.json_1" Component_="Renamer.deps.json_1" FileName="RENAME~1.JSO|Renamer.deps.json" Attributes="0" SourcePath="..\source\Renamer\bin\Release R26\Renamer.deps.json" SelfReg="false"/>
+    <ROW File="Renamer_Isolated.addin" Component_="Renamer_Isolated.addin" FileName="RENAME~2.ADD|Renamer.addin" Attributes="0" SourcePath="..\source\Renamer\Renamer_Isolated.addin" SelfReg="false"/>
+    <ROW File="JetBrains.Annotations.dll" Component_="JetBrains.Annotations.dll" FileName="JETBRA~1.DLL|JetBrains.Annotations.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\JetBrains.Annotations.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Configuration.Abstractions.dll" Component_="Microsoft.Extensions.Configuration.Abstractions.dll" FileName="MICROS~1.DLL|Microsoft.Extensions.Configuration.Abstractions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Configuration.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Configuration.Binder.dll" Component_="Microsoft.Extensions.Configuration.Binder.dll" FileName="MICROS~2.DLL|Microsoft.Extensions.Configuration.Binder.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Configuration.Binder.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Configuration.CommandLine.dll" Component_="Microsoft.Extensions.Configuration.CommandLine.dll" FileName="MICROS~3.DLL|Microsoft.Extensions.Configuration.CommandLine.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Configuration.CommandLine.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Configuration.dll" Component_="Microsoft.Extensions.Configuration.dll" FileName="MICROS~4.DLL|Microsoft.Extensions.Configuration.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Configuration.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Configuration.EnvironmentVariables.dll" Component_="Microsoft.Extensions.Configuration.EnvironmentVariables.dll" FileName="MICROS~5.DLL|Microsoft.Extensions.Configuration.EnvironmentVariables.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Configuration.FileExtensions.dll" Component_="Microsoft.Extensions.Configuration.FileExtensions.dll" FileName="MICROS~6.DLL|Microsoft.Extensions.Configuration.FileExtensions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Configuration.FileExtensions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Configuration.Json.dll" Component_="Microsoft.Extensions.Configuration.Json.dll" FileName="MICROS~7.DLL|Microsoft.Extensions.Configuration.Json.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Configuration.Json.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Configuration.UserSecrets.dll" Component_="Microsoft.Extensions.Configuration.UserSecrets.dll" FileName="MICROS~8.DLL|Microsoft.Extensions.Configuration.UserSecrets.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Configuration.UserSecrets.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.Abstractions.dll" Component_="Microsoft.Extensions.DependencyInjection.Abstractions.dll" FileName="MICROS~9.DLL|Microsoft.Extensions.DependencyInjection.Abstractions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.DependencyInjection.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.dll" Component_="Microsoft.Extensions.DependencyInj_1_ection.dll" FileName="MICRO~10.DLL|Microsoft.Extensions.DependencyInjection.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.DependencyInjection.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Diagnostics.Abstractions.dll" Component_="Microsoft.Extensions.Diagnostics.Abstractions.dll" FileName="MICRO~11.DLL|Microsoft.Extensions.Diagnostics.Abstractions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Diagnostics.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Diagnostics.dll" Component_="Microsoft.Extensions.Diagnostics.dll" FileName="MICRO~12.DLL|Microsoft.Extensions.Diagnostics.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Diagnostics.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.FileProviders.Abstractions.dll" Component_="Microsoft.Extensions.FileProviders.Abstractions.dll" FileName="MICRO~13.DLL|Microsoft.Extensions.FileProviders.Abstractions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.FileProviders.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.FileProviders.Physical.dll" Component_="Microsoft.Extensions.FileProviders.Physical.dll" FileName="MICRO~14.DLL|Microsoft.Extensions.FileProviders.Physical.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.FileProviders.Physical.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.FileSystemGlobbing.dll" Component_="Microsoft.Extensions.FileSystemGlobbing.dll" FileName="MICRO~15.DLL|Microsoft.Extensions.FileSystemGlobbing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.FileSystemGlobbing.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Hosting.Abstractions.dll" Component_="Microsoft.Extensions.Hosting.Abstractions.dll" FileName="MICRO~16.DLL|Microsoft.Extensions.Hosting.Abstractions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Hosting.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Hosting.dll" Component_="Microsoft.Extensions.Hosting.dll" FileName="MICRO~17.DLL|Microsoft.Extensions.Hosting.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Hosting.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.Abstractions.dll" Component_="Microsoft.Extensions.Logging.Abstractions.dll" FileName="MICRO~18.DLL|Microsoft.Extensions.Logging.Abstractions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Logging.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.Configuration.dll" Component_="Microsoft.Extensions.Logging.Configuration.dll" FileName="MICRO~19.DLL|Microsoft.Extensions.Logging.Configuration.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Logging.Configuration.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.Console.dll" Component_="Microsoft.Extensions.Logging.Console.dll" FileName="MICRO~20.DLL|Microsoft.Extensions.Logging.Console.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Logging.Console.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.Debug.dll" Component_="Microsoft.Extensions.Logging.Debug.dll" FileName="MICRO~21.DLL|Microsoft.Extensions.Logging.Debug.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Logging.Debug.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.dll" Component_="Microsoft.Extensions.Logging.dll" FileName="MICRO~22.DLL|Microsoft.Extensions.Logging.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Logging.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.EventLog.dll" Component_="Microsoft.Extensions.Logging.EventLog.dll" FileName="MICRO~23.DLL|Microsoft.Extensions.Logging.EventLog.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Logging.EventLog.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.EventSource.dll" Component_="Microsoft.Extensions.Logging.EventSource.dll" FileName="MICRO~24.DLL|Microsoft.Extensions.Logging.EventSource.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Logging.EventSource.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Options.ConfigurationExtensions.dll" Component_="Microsoft.Extensions.Options.ConfigurationExtensions.dll" FileName="MICRO~25.DLL|Microsoft.Extensions.Options.ConfigurationExtensions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Options.ConfigurationExtensions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Options.dll" Component_="Microsoft.Extensions.Options.dll" FileName="MICRO~26.DLL|Microsoft.Extensions.Options.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Options.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Primitives.dll" Component_="Microsoft.Extensions.Primitives.dll" FileName="MICRO~27.DLL|Microsoft.Extensions.Primitives.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Extensions.Primitives.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Xaml.Behaviors.dll" Component_="Microsoft.Xaml.Behaviors.dll" FileName="MICRO~28.DLL|Microsoft.Xaml.Behaviors.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Microsoft.Xaml.Behaviors.dll" SelfReg="false"/>
+    <ROW File="Nice3point.Revit.Extensions.dll" Component_="Nice3point.Revit.Extensions.dll" FileName="NICE3P~1.DLL|Nice3point.Revit.Extensions.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Nice3point.Revit.Extensions.dll" SelfReg="false"/>
+    <ROW File="Nice3point.Revit.Toolkit.dll" Component_="Nice3point.Revit.Toolkit.dll" FileName="NICE3P~2.DLL|Nice3point.Revit.Toolkit.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Nice3point.Revit.Toolkit.dll" SelfReg="false"/>
+    <ROW File="Renamer.deps.json_2" Component_="Renamer.deps.json_2" FileName="RENAME~1.JSO|Renamer.deps.json" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Renamer.deps.json" SelfReg="false"/>
+    <ROW File="Renamer.dll_5" Component_="Renamer.dll_5" FileName="Renamer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Renamer.dll" SelfReg="false"/>
+    <ROW File="Serilog.dll" Component_="Serilog.dll" FileName="Serilog.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Serilog.dll" SelfReg="false"/>
+    <ROW File="Serilog.Extensions.Hosting.dll" Component_="Serilog.Extensions.Hosting.dll" FileName="SERILO~1.DLL|Serilog.Extensions.Hosting.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Serilog.Extensions.Hosting.dll" SelfReg="false"/>
+    <ROW File="Serilog.Extensions.Logging.dll" Component_="Serilog.Extensions.Logging.dll" FileName="SERILO~2.DLL|Serilog.Extensions.Logging.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Serilog.Extensions.Logging.dll" SelfReg="false"/>
+    <ROW File="Serilog.Sinks.Async.dll" Component_="Serilog.Sinks.Async.dll" FileName="SERILO~3.DLL|Serilog.Sinks.Async.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Serilog.Sinks.Async.dll" SelfReg="false"/>
+    <ROW File="Serilog.Sinks.Debug.dll" Component_="Serilog.Sinks.Debug.dll" FileName="SERILO~4.DLL|Serilog.Sinks.Debug.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Serilog.Sinks.Debug.dll" SelfReg="false"/>
+    <ROW File="Serilog.Sinks.File.dll" Component_="Serilog.Sinks.File.dll" FileName="SERILO~5.DLL|Serilog.Sinks.File.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Serilog.Sinks.File.dll" SelfReg="false"/>
+    <ROW File="Serilog.Sinks.GoogleAnalytics.dll" Component_="Serilog.Sinks.GoogleAnalytics.dll" FileName="SERILO~6.DLL|Serilog.Sinks.GoogleAnalytics.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Serilog.Sinks.GoogleAnalytics.dll" SelfReg="false"/>
+    <ROW File="Serilog.Sinks.PeriodicBatching.dll" Component_="Serilog.Sinks.PeriodicBatching.dll" FileName="SERILO~7.DLL|Serilog.Sinks.PeriodicBatching.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Serilog.Sinks.PeriodicBatching.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Data.WPF.dll_5" Component_="Syncfusion.Data.WPF.dll_5" FileName="SYNCFU~1.DLL|Syncfusion.Data.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Syncfusion.Data.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Licensing.dll_5" Component_="Syncfusion.Licensing.dll_5" FileName="SYNCFU~2.DLL|Syncfusion.Licensing.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Syncfusion.Licensing.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.SfGrid.WPF.dll_5" Component_="Syncfusion.SfGrid.WPF.dll_5" FileName="SYNCFU~3.DLL|Syncfusion.SfGrid.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Syncfusion.SfGrid.WPF.dll" SelfReg="false"/>
+    <ROW File="Syncfusion.Shared.WPF.dll_5" Component_="Syncfusion.Shared.WPF.dll_5" FileName="SYNCFU~4.DLL|Syncfusion.Shared.WPF.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Syncfusion.Shared.WPF.dll" SelfReg="false"/>
+    <ROW File="CommunityToolkit.Mvvm.dll" Component_="CommunityToolkit.Mvvm.dll" FileName="COMMUN~1.DLL|CommunityToolkit.Mvvm.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\CommunityToolkit.Mvvm.dll" SelfReg="false"/>
+    <ROW File="Humanizer.dll" Component_="Humanizer.dll" FileName="HUMANI~1.DLL|Humanizer.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\Humanizer.dll" SelfReg="false"/>
+    <ROW File="IniParser.dll" Component_="IniParser.dll" FileName="INIPAR~1.DLL|IniParser.dll" Attributes="0" SourcePath="..\source\Renamer\bin\Release R27\IniParser.dll" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
     <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFileName="Renamer.[|ProductVersion]" Languages="en_GB" InstallationType="4" SummInfoMetadata="Page Count:450" UseLargeSchema="true" MsiPackageType="x64"/>
@@ -219,6 +323,55 @@
     <ROW Feature_="MainFeature" Component_="Syncfusion.Shared.WPF.dll_4"/>
     <ROW Feature_="MainFeature" Component_="Renamer.deps.json"/>
     <ROW Feature_="MainFeature" Component_="Renamer.deps.json_1"/>
+    <ROW Feature_="MainFeature" Component_="Renamer_Isolated.addin"/>
+    <ROW Feature_="MainFeature" Component_="JetBrains.Annotations.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.Binder.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.CommandLine.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.EnvironmentVariables.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.FileExtensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.Json.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.UserSecrets.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.DependencyInj_1_ection.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Diagnostics.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Diagnostics.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.FileProviders.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.FileProviders.Physical.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.FileSystemGlobbing.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Hosting.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Hosting.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.Configuration.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.Console.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.Debug.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.EventLog.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.EventSource.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Options.ConfigurationExtensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Options.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW Feature_="MainFeature" Component_="Nice3point.Revit.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Nice3point.Revit.Toolkit.dll"/>
+    <ROW Feature_="MainFeature" Component_="Renamer.deps.json_2"/>
+    <ROW Feature_="MainFeature" Component_="Renamer.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.dll"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.Extensions.Hosting.dll"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.Extensions.Logging.dll"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.Sinks.Async.dll"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.Sinks.Debug.dll"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.Sinks.File.dll"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.Sinks.GoogleAnalytics.dll"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.Sinks.PeriodicBatching.dll"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Data.WPF.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Licensing.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.SfGrid.WPF.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Syncfusion.Shared.WPF.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="CommunityToolkit.Mvvm.dll"/>
+    <ROW Feature_="MainFeature" Component_="Humanizer.dll"/>
+    <ROW Feature_="MainFeature" Component_="IniParser.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
