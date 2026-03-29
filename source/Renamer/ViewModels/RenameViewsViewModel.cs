@@ -14,7 +14,7 @@ internal partial class RenameViewsViewModel : BaseRenameViewModel
 
     protected override void LoadElements()
     {
-        var levels = App.RevitDocument.GetElements()
+        var levels = App.RevitDocument.CollectElements()
             .OfClass(typeof(View))
             .WhereElementIsNotElementType()
             .Where(v => v.Category != null)

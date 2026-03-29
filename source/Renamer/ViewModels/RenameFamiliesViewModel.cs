@@ -16,7 +16,7 @@ internal partial class RenameFamiliesViewModel : BaseRenameViewModel
 
     protected override void LoadElements()
     {
-        var families = App.RevitDocument.GetElements()
+        var families = App.RevitDocument.CollectElements()
             .OfClass(typeof(Family))
             .Cast<Family>();
 

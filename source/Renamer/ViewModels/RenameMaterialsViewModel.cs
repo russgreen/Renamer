@@ -33,15 +33,15 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
 
     protected override void LoadElements()
     {
-        var materials = App.RevitDocument.GetElements()
+        var materials = App.RevitDocument.CollectElements()
             .OfClass(typeof(Material))
             .ToList();
 
-        var appearanceAssets = App.RevitDocument.GetElements()
+        var appearanceAssets = App.RevitDocument.CollectElements()
             .OfClass(typeof(AppearanceAssetElement))
             .ToList();
 
-        var physicalAssets = App.RevitDocument.GetElements()
+        var physicalAssets = App.RevitDocument.CollectElements()
             .OfClass(typeof(PropertySetElement))
             .ToList();
 
