@@ -3,6 +3,7 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Events;
 using Microsoft.Extensions.Logging;
 using Nice3point.Revit.Extensions;
+using Nice3point.Revit.Extensions.UI;
 using Nice3point.Revit.Toolkit.External;
 using Renamer.Commands;
 using Renamer.Controllers;
@@ -42,7 +43,7 @@ namespace Renamer
             var panel = RibbonPanel(CachedUiCtrApp);
 
             Syncfusion.Licensing.SyncfusionLicenseProvider
-                .RegisterLicense("Ngo9BigBOggjGyl/VkR+XU9Ff1RDX3xKf0x/TGpQb19xflBPallYVBYiSV9jS3hTdEVkWHxbcXRWRGFUV091XQ==");
+                .RegisterLicense("##SyncfusionLicense##");
 
             AddAppDocEvents();
         }
