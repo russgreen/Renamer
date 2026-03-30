@@ -22,8 +22,8 @@ public class CommandRenameViews : ExternalCommand
             _logger.LogInformation("{command}", nameof(CommandRenameViews));
         }
 
-        App.CachedUiApp = Context.UiApplication;
-        App.RevitDocument = Context.ActiveDocument;
+        App.CachedUiApp = RevitContext.UiApplication;
+        App.RevitDocument = RevitContext.ActiveDocument;
 
         var window = new Views.RenameViewsView();
         window.ShowDialog();

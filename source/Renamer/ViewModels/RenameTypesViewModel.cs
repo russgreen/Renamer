@@ -14,7 +14,8 @@ internal partial class RenameTypesViewModel : BaseRenameViewModel
 
     protected override void LoadElements()
     {
-        var types = App.RevitDocument.GetElements().WhereElementIsElementType()
+        var types = App.RevitDocument.CollectElements()
+            .WhereElementIsElementType()
             .Cast<ElementType>();
 
         var models = types.Select(element => new ElementNameModel

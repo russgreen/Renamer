@@ -15,7 +15,7 @@ internal partial class RenameLevelsViewModel : BaseRenameViewModel
 
     protected override void LoadElements()
     {
-        var levels = App.RevitDocument.GetElements()
+        var levels = App.RevitDocument.CollectElements()
             .OfClass(typeof(Level))
             .Cast<Level>();
 

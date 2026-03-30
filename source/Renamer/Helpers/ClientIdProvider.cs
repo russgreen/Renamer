@@ -11,7 +11,7 @@ internal static class ClientIdProvider
     private const string _defaultFileName = "client_id.txt";
     private const string _deterministicSalt = "renamer"; // product-specific salt
 
-    public static string GetOrCreateClientId(string? dirName = _defaultDirName, string? fileName = _defaultFileName)
+    public static string GetOrCreateClientId(string dirName = _defaultDirName, string fileName = _defaultFileName)
     {
         try
         {
@@ -46,7 +46,7 @@ internal static class ClientIdProvider
         return ToHexUpper(hash); // uppercase hex, GA accepts arbitrary strings
     }
 
-    private static string? GetWindowsMachineGuid()
+    private static string GetWindowsMachineGuid()
     {
         try
         {

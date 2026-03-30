@@ -22,8 +22,8 @@ public class CommandRenameFilters : ExternalCommand
             _logger.LogInformation("{command}", nameof(CommandRenameFilters));
         }
 
-        App.CachedUiApp = Context.UiApplication;
-        App.RevitDocument = Context.ActiveDocument;
+        App.CachedUiApp = RevitContext.UiApplication;
+        App.RevitDocument = RevitContext.ActiveDocument;
 
         var window = new Views.RenameFiltersView();
         window.ShowDialog();

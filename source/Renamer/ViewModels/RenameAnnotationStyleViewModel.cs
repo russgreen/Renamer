@@ -20,11 +20,11 @@ internal partial class RenameAnnotationStyleViewModel : BaseRenameViewModel
 
     protected override void LoadElements()
     {
-        var textNoteTypes = App.RevitDocument.GetElements()
+        var textNoteTypes = App.RevitDocument.CollectElements()
             .OfClass(typeof(TextNoteType))
             .ToList();
 
-        var dimensionTypes = App.RevitDocument.GetElements()
+        var dimensionTypes = App.RevitDocument.CollectElements()
             .OfClass(typeof(DimensionType))
             .ToList();
 

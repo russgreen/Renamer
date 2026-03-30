@@ -33,15 +33,15 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
 
     protected override void LoadElements()
     {
-        var materials = App.RevitDocument.GetElements()
+        var materials = App.RevitDocument.CollectElements()
             .OfClass(typeof(Material))
             .ToList();
 
-        var appearanceAssets = App.RevitDocument.GetElements()
+        var appearanceAssets = App.RevitDocument.CollectElements()
             .OfClass(typeof(AppearanceAssetElement))
             .ToList();
 
-        var physicalAssets = App.RevitDocument.GetElements()
+        var physicalAssets = App.RevitDocument.CollectElements()
             .OfClass(typeof(PropertySetElement))
             .ToList();
 
@@ -201,6 +201,8 @@ internal partial class RenameMaterialsViewModel : BaseRenameViewModel
         var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2025\Revit.ini";
 #elif REVIT2026
         var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2026\Revit.ini";
+#elif REVIT2027
+        var revitIniFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Autodesk\Revit\Autodesk Revit 2027\Revit.ini";
 #endif
 
 
