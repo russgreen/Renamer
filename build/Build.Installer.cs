@@ -1,6 +1,6 @@
-﻿using Nuke.Common;
-using Nuke.Common.Git;
-using Nuke.Common.ProjectModel;
+using Fallout.Common;
+using Fallout.Common.Git;
+using Fallout.Solutions;
 using Octokit;
 using Serilog;
 using System;
