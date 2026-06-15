@@ -32,11 +32,11 @@
 			<KeyFile>$(SolutionDir)SyncfusionKey.txt</KeyFile>
 			<DummyKey>##SyncfusionLicense##</DummyKey>
 		</PropertyGroup>
-		<!-- Read the license key from the key file -->
+		 <!-- Read the license key from the key file -->
 		<ReadLinesFromFile File="$(KeyFile)">
 			<Output TaskParameter="Lines" PropertyName="LicenseKey" />
 		</ReadLinesFromFile>
-		<!-- Replace the dummy key with the actual license key -->
+		 <!-- Replace the dummy key with the actual license key -->
 		<ReplaceFileText
 		  InputFilename="$(SourceFile)"
 		  OutputFilename="$(SourceFile)"

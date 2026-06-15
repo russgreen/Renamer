@@ -14,7 +14,7 @@
     <Assembly>.\Renamer\Renamer.dll</Assembly>
 	<AddInId>859606CB-FF6F-4FA9-9E24-40A914CFF3C0</AddInId>
     <FullClassName>Renamer.App</FullClassName>
-    <VendorId>ARBG</VendorId>
+    <VendorId>Renamer</VendorId>
 	<VisibilityMode>NotVisibleInFamily</VisibilityMode>
 	<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
   </AddIn>
