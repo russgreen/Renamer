@@ -5,6 +5,7 @@ using Autodesk.Revit.UI;
 using Microsoft.Extensions.Logging;
 using Nice3point.Revit.Toolkit;
 using Nice3point.Revit.Toolkit.External;
+using Nice3point.Revit.Toolkit.Helpers;
 using Serilog.Context;
 using System;
 using System.Runtime.InteropServices;
@@ -29,8 +30,11 @@ namespace Renamer.Commands
             App.CachedUiApp = RevitContext.UiApplication;
             App.RevitDocument = RevitContext.ActiveDocument;
 
-            var window = new Views.RenameFamiliesView();
-            window.ShowDialog();
+            using (ResolveHelper.BeginAssemblyResolveScope<App>())
+            {
+                var window = new Views.RenameFamiliesView();
+                window.ShowDialog();
+            }
         }
     }
 }

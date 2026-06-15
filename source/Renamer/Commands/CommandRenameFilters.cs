@@ -4,6 +4,7 @@ using Autodesk.Revit.UI;
 using Microsoft.Extensions.Logging;
 using Nice3point.Revit.Toolkit;
 using Nice3point.Revit.Toolkit.External;
+using Nice3point.Revit.Toolkit.Helpers;
 using Serilog.Context;
 using System;
 
@@ -25,7 +26,10 @@ public class CommandRenameFilters : ExternalCommand
         App.CachedUiApp = RevitContext.UiApplication;
         App.RevitDocument = RevitContext.ActiveDocument;
 
-        var window = new Views.RenameFiltersView();
-        window.ShowDialog();
+        using (ResolveHelper.BeginAssemblyResolveScope<App>())
+        {
+            var window = new Views.RenameFiltersView();
+            window.ShowDialog();
+        }
     }
 }
