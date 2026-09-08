@@ -19,7 +19,7 @@ namespace Renamer
         {
             var logPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Renamer", "Log.json");
             var cultureInfo = Thread.CurrentThread.CurrentCulture;
-            var regionInfo = new RegionInfo(cultureInfo.LCID);
+            var regionInfo = new RegionInfo(cultureInfo.Name);
             var clientId = ClientIdProvider.GetOrCreateClientId();
 
             var loggerConfigRenamer = new LoggerConfiguration()
