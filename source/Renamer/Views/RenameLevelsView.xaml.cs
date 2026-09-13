@@ -18,5 +18,10 @@ public partial class RenameLevelsView : Window
 
         _viewModel = (ViewModels.RenameLevelsViewModel)this.DataContext;
         _viewModel.ClosingRequest += (sender, e) => this.Close();
+
+        sfDataGridHost.Content = RenameGridFactory.Create(
+            new[] { "Category", "Name" },
+            RenameGridFactory.CreateTextColumn("Category", "Category"),
+            RenameGridFactory.CreateTextColumn("Name", "Level Name"));
     }
 }
