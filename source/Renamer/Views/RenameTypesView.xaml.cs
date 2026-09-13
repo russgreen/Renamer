@@ -32,5 +32,11 @@ public partial class RenameTypesView : Window
 
         _viewModel = (ViewModels.RenameTypesViewModel)this.DataContext;
         _viewModel.ClosingRequest += (sender, e) => this.Close();
+
+        sfDataGridHost.Content = RenameGridFactory.Create(
+            new[] { "Category", "Name2", "Name" },
+            RenameGridFactory.CreateTextColumn("Category", "Category"),
+            RenameGridFactory.CreateTextColumn("Name2", "Family Name"),
+            RenameGridFactory.CreateTextColumn("Name", "Type Name"));
     }
 }

@@ -21,6 +21,11 @@ namespace Renamer.Views
 
             _viewModel = (ViewModels.RenameMaterialsViewModel)this.DataContext;
             _viewModel.ClosingRequest += (sender, e) => this.Close();
+
+            sfDataGridHost.Content = RenameGridFactory.Create(
+                new[] { "Category", "Name" },
+                RenameGridFactory.CreateTextColumn("Category", "Category"),
+                RenameGridFactory.CreateTextColumn("Name", "Name"));
         }
     }
 }
