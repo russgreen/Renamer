@@ -7,6 +7,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 
 partial class Build
 {
@@ -16,7 +17,8 @@ partial class Build
     .Executes(() =>
     {
         var aipProjectPath = Path.Combine(RootDirectory, @"Installer\Renamer.aip");
-        var version = Solution.Renamer.GetProperty("Version");
+        //var version = Solution.Renamer.GetProperty("Version");
+        var version = GetProjectVersion(Path.Combine(RootDirectory, @"source\Renamer\Renamer.csproj"));
 
         Log.Information("AIP : {aipProjectPath}", aipProjectPath);
         Log.Information("Version : {version}", version);
@@ -27,6 +29,30 @@ partial class Build
 
         SignMSI(version);
     });
+
+    static string GetProjectVersion(string projectFilePath)
+    {
+        var doc = XDocument.Load(projectFilePath);
+        var root = doc.Root;
+        var propertyGroup = root?
+            .Elements()
+            .FirstOrDefault(x => x.Name.LocalName == "PropertyGroup");
+
+        var versionProperties = new[]
+        {
+            "Version",
+            "VersionPrefix",
+            "ApplicationVersion",
+            "FileVersion",
+            "InformationalVersion"
+        };
+
+        var versionElement = propertyGroup?
+            .Elements()
+            .FirstOrDefault(x => versionProperties.Contains(x.Name.LocalName) && !string.IsNullOrWhiteSpace(x.Value));
+
+        return versionElement?.Value ?? "1.0.0";
+    }
 
     static void SignMSI(string version)
     {
