@@ -26,42 +26,7 @@
             <RowDefinition MaxHeight="30"/>
         </Grid.RowDefinitions>
 
-        <syncfusion:SfDataGrid Grid.Row="0" Grid.Column="0"
-                       ItemsSource="{Binding Elements}"
-                       SelectedItems="{Binding SelectedElements}"
-                       AutoGenerateColumns="False"
-                       AllowEditing="False"
-                       AllowGrouping="False"
-                       AllowResizingColumns="True"
-                       AllowFiltering="True"
-                       NavigationMode="Cell" 
-                       SelectionMode="Extended"
-                       GridValidationMode="InView"
-                       ColumnSizer="AutoWithLastColumnFill" >
-
-            <syncfusion:SfDataGrid.SortColumnDescriptions>
-                <syncfusion:SortColumnDescription ColumnName="Category" SortDirection="Ascending" />
-                <syncfusion:SortColumnDescription ColumnName="Name" SortDirection="Ascending" />
-            </syncfusion:SfDataGrid.SortColumnDescriptions>
-
-            <syncfusion:SfDataGrid.Columns>
-                <syncfusion:GridCheckBoxSelectorColumn MappingName="SelectorColumn" HeaderText="" AllowCheckBoxOnHeader="True" Width="34" />
-
-                <syncfusion:GridTextColumn MappingName="Category" HeaderText="Category" Padding="0,0,10,0" />
-                <syncfusion:GridTextColumn MappingName="Name" HeaderText="Family Name" Padding="0,0,10,0"  />
-                <syncfusion:GridTextColumn MappingName="NewName" HeaderText="New Name" Padding="0,0,10,0"  >
-                    <syncfusion:GridTextColumn.CellStyle>
-                        <Style TargetType="syncfusion:GridCell" >
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=NewName}" Value="[Renamed]">
-                                    <Setter Property="Foreground" Value="DarkGreen" />
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </syncfusion:GridTextColumn.CellStyle>
-                </syncfusion:GridTextColumn>
-            </syncfusion:SfDataGrid.Columns>
-        </syncfusion:SfDataGrid>
+        <ContentControl x:Name="sfDataGridHost" Grid.Row="0" Grid.Column="0" />
 
         <StackPanel Grid.Row="0" Grid.Column="1" >
             <GroupBox Header="Prefix" Margin="5,-10,0,10">

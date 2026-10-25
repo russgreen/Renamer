@@ -1,0 +1,31 @@
+<Project Sdk="WixToolset.Sdk/5.0.2">
+
+  <PropertyGroup>
+    <OutputType>Package</OutputType>
+    <OutputPath>$(MSBuildProjectDirectory)\Renamer-SetupFiles\</OutputPath>
+    <Platforms>x64</Platforms>
+    <Platform>x64</Platform>
+    <InstallerPlatform>x64</InstallerPlatform>
+    <SuppressValidation>false</SuppressValidation>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\..\'))</RepoRoot>
+    <!-- The product version is read from the add-in project so there is a single place to bump it. -->
+    <AddinProjectText>$([System.IO.File]::ReadAllText('$(RepoRoot)source\Renamer\Renamer.csproj'))</AddinProjectText>
+    <VersionPrefix Condition="'$(VersionPrefix)' == ''">$([System.Text.RegularExpressions.Regex]::Match('$(AddinProjectText)', '&lt;Version&gt;([^&lt;]+)&lt;/Version&gt;').Groups[1].Value)</VersionPrefix>
+    <OutputName>Renamer.$(VersionPrefix)</OutputName>
+    <DefineConstants>$(DefineConstants);ProductVersion=$(VersionPrefix)</DefineConstants>
+    <DefineConstants>$(DefineConstants);RepoRoot=$(RepoRoot.TrimEnd('\'))</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="renamer_background.bmp" />
+    <None Include="renamer_banner.bmp" />
+  </ItemGroup>
+
+</Project>
