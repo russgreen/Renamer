@@ -16,7 +16,7 @@ partial class Build
     .OnlyWhenStatic(() => GitRepository.IsOnMainOrMasterBranch())
     .Executes(() =>
     {
-        var installerProjectPath = Path.Combine(RootDirectory, "Installer", "Renamer.Installer.wixproj");
+        var installerProjectPath = Path.Combine(RootDirectory, "installer", "Renamer.Setup.wixproj");
         var version = GetProjectVersion(Path.Combine(RootDirectory, @"source\Renamer\Renamer.csproj"));
 
         Log.Information("WiX project : {installerProjectPath}", installerProjectPath);
@@ -56,7 +56,7 @@ partial class Build
 
     static void SignMSI(string version)
     {
-        var msiOutputPath = Path.Combine(RootDirectory, @"Installer\Renamer-SetupFiles");
+        var msiOutputPath = Path.Combine(RootDirectory, @"installer\Renamer-SetupFiles");
         Log.Information(msiOutputPath);
 
         var msiPath = Directory.GetFiles(msiOutputPath, $"*{version}.msi").FirstOrDefault();

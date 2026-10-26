@@ -365,10 +365,8 @@ FodyWeavers.xsd
 # Syncfusion License Key 
 SyncfusionKey.txt
 
-# Advanced Installer
-Installer/*.back.aip
-Installer/Renamer-cache/*
-Installer/Renamer-SetupFiles/*
+# WiX installer
+installer/*-SetupFiles/
 
 # misc solution stuff
 ApiSecret.txt
