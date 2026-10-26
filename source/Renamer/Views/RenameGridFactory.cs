@@ -29,7 +29,17 @@ internal static class RenameGridFactory
         };
 
         grid.SetBinding(SfDataGrid.ItemsSourceProperty, new Binding("Elements"));
-        grid.SetBinding(SfDataGrid.SelectedItemsProperty, new Binding("SelectedElements"));
+
+        // SfDataGrid discards a SelectedItems binding that is set before the grid has been
+        // loaded (it swaps in its own collection), so the view model never sees selection
+        // changes. Bind it once the grid is in the visual tree.
+        RoutedEventHandler bindSelectedItems = null;
+        bindSelectedItems = (sender, e) =>
+        {
+            grid.Loaded -= bindSelectedItems;
+            grid.SetBinding(SfDataGrid.SelectedItemsProperty, new Binding("SelectedElements"));
+        };
+        grid.Loaded += bindSelectedItems;
 
         foreach (var columnName in sortColumnNames)
         {
