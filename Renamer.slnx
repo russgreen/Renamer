@@ -31,7 +31,7 @@
     <BuildType Solution="Release R26|*" Project="Release" />
     <BuildType Solution="Release R27|*" Project="Release" />
   </Project>
-  <Project Path="Installer/Renamer.Installer.wixproj" Type="b7dd6f7e-def8-4e67-b5b7-07ef123db6f0">
+  <Project Path="installer/Renamer.Setup.wixproj" Type="b7dd6f7e-def8-4e67-b5b7-07ef123db6f0">
     <BuildType Solution="Debug R22|*" Project="Debug" />
     <BuildType Solution="Debug R23|*" Project="Debug" />
     <BuildType Solution="Debug R24|*" Project="Debug" />
