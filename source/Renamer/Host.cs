@@ -51,7 +51,7 @@ namespace Renamer
                 opts.ApiSecret = "##APISECRET##";
                 opts.ClientId = clientId;
 
-                opts.FlushPeriod = TimeSpan.FromSeconds(1);
+                opts.FlushPeriod = TimeSpan.FromSeconds(1.0);
                 opts.BatchSizeLimit = 1;
                 opts.MaxEventsPerRequest = 1;
                 opts.IncludePredicate = e => e.Properties.ContainsKey("UsageTracking");
